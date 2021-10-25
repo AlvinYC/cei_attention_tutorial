@@ -11,7 +11,7 @@
             "program": "preprocess.py",
             "args": [
                 "-load_data", "/media/alvin/HD/dataset_nlp/lcsts_mini/",
-                "-save_data", "media/alvin/HD/dataset_nlp/lcsts_mini/" ],
+                "-save_data", "./data/" ],
             "console": "integratedTerminal"
         }
     ]
