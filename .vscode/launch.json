@@ -5,13 +5,23 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "name": "train",
+            "type": "python",
+            "request": "launch",
+            "program": "train.py",
+            "args": [
+                "-config","lcsts.yaml",
+                "-gpus","0"],
+            "console": "integratedTerminal"
+        },      
+        {
             "name": "preprocess",
             "type": "python",
             "request": "launch",
             "program": "preprocess.py",
             "args": [
-                "-load_data", "/media/alvin/HD/dataset_nlp/lcsts_mini/",
-                "-save_data", "./data/" ],
+                "-load_data", "/media/alvin/HD/dataset_nlp/lcsts/",
+                "-save_data", "./lcsts_data/" ],
             "console": "integratedTerminal"
         }
     ]
