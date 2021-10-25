@@ -1,5 +1,6 @@
 # alvin 
-data/
+lcsts_data/
+lcsts_log/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
