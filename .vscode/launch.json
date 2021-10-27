@@ -11,7 +11,9 @@
             "program": "train.py",
             "args": [
                 "-config","lcsts.yaml",
-                "-gpus","0"],
+                "-gpus","0",
+                "-char"
+            ],
             "console": "integratedTerminal"
         },      
         {
@@ -20,8 +22,12 @@
             "request": "launch",
             "program": "preprocess.py",
             "args": [
+                //"-load_data", "/media/alvin/HD/dataset_nlp/lcsts_mini/",
                 "-load_data", "/media/alvin/HD/dataset_nlp/lcsts/",
-                "-save_data", "./lcsts_data/" ],
+                "-save_data", "./lcsts_data/",
+                "-src_char", 
+                "-tgt_char",
+                "-share"],
             "console": "integratedTerminal"
         }
     ]
