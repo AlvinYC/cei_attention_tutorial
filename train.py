@@ -239,7 +239,13 @@ def eval_model(model, data, params):
 
     score = {}
     for metric in config.metrics:
-        score[metric] = getattr(utils, metric)(reference, candidate, params['log_path'], params['log'], config)
+        if metric == 'rouge':
+            reference_id = list(map(lambda x:[str(y) for y in tgt_vocab.convertToIdx(x, utils.UNK_WORD)],reference))
+            candidate_id = list(map(lambda x:[str(y) for y in tgt_vocab.convertToIdx(x, utils.UNK_WORD)],candidate))
+            score[metric] = getattr(utils, metric)(reference_id, candidate_id, params['log_path'], params['log'], config)
+        else:
+            # bleu
+            score[metric] = getattr(utils, metric)(reference, candidate, params['log_path'], params['log'], config)
 
     return score
 
