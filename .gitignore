@@ -2,8 +2,8 @@
 lcsts_data/
 lcsts_data_mini/
 lcsts_log/
-RELEASE-1.5.5/ROUGE-1.5.5.p
-l
+RELEASE-1.5.5/ROUGE-1.5.5.pl
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
